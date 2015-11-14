@@ -28,4 +28,6 @@ proguard/
 
 /.idea/workspace.xml
 /.idea/libraries
+/.idea
+/*.iml
 .DS_Store
