@@ -1,4 +1,4 @@
-package com.iamstevenliu.smarthome;
+package com.iamstevenliu.smarthome.Activities;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Resources;
@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.iamstevenliu.smarthome.R;
 import com.iamstevenliu.smarthome.fragments.Mainpage;
 
 public class MainActivity extends AppCompatActivity {
