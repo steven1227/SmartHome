@@ -15,6 +15,8 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.iamstevenliu.smarthome.NetTool.NetCallBckInterface;
+import com.iamstevenliu.smarthome.NetTool.NetManagerQueue;
 import com.iamstevenliu.smarthome.R;
 import com.iamstevenliu.smarthome.fragments.Mainpage;
 
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setRequestedOrientation (ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -47,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
         ft.replace(R.id.my_placeholder, new Mainpage());
 
         ft.commit();
+        NetManagerQueue.sendLoginRequest("eco", "eco", new NetCallBckInterface() {
+            @Override
+            public void loginSuccess(String msg) {
+                System.out.println("登录成功");
+            }
+        });
+
     }
 
     @Override
