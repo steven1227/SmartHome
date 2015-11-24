@@ -1,3 +1,8 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">Smarthome</string>
+=======
+    <string name="app_name">SmartHome</string>
+    <string name="action_settings">Settings</string>
+>>>>>>> 51ae8842ef028d882f3a336f2c243c18e4a33866
 </resources>
