@@ -45,10 +45,9 @@ public class MainActivity extends AppCompatActivity {
         });
 
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-
         ft.replace(R.id.my_placeholder, new Mainpage());
-
         ft.commit();
+
         NetManagerQueue.sendLoginRequest("eco", "eco", new NetCallBckInterface() {
             @Override
             public void loginSuccess(String msg) {
